@@ -1,17 +1,12 @@
 import Header from "./components/header";
 import { ways } from "./data";
-
-function WayToTeach(props) {
-  return (
-    <li>
-      <p>
-        <strong>{props.title}</strong> {props.description}
-      </p>
-    </li>
-  );
-}
+import WayToTeach from "./components/WayToTeach";
+import Button from "./components/Button/Button";
 
 export default function App() {
+  function handleClick() {
+    console.log("click");
+  }
   return (
     <div>
       <Header />
@@ -28,6 +23,11 @@ export default function App() {
             <WayToTeach {...ways[2]} />
             <WayToTeach {...ways[3]} />
           </ul>
+        </section>
+        <section>
+          <h3>Почему мы</h3>
+          <Button buttonClick={handleClick}>1</Button>
+          <Button buttonClick={handleClick}>2</Button>
         </section>
       </main>
     </div>
