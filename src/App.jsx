@@ -1,11 +1,13 @@
 import Header from "./components/header";
-import { ways } from "./data";
+import { ways, differences } from "./data";
 import WayToTeach from "./components/WayToTeach";
+import { useState } from "react";
 import Button from "./components/Button/Button";
 
 export default function App() {
-  function handleClick() {
-    console.log("click");
+  const [content, setContent] = useState("Najmi");
+  function handleClick(type) {
+    setContent(type);
   }
   return (
     <div>
@@ -26,8 +28,9 @@ export default function App() {
         </section>
         <section>
           <h3>Почему мы</h3>
-          <Button buttonClick={handleClick}>1</Button>
-          <Button buttonClick={handleClick}>2</Button>
+          <Button buttonClick={() => handleClick("way")}>1</Button>
+          <Button buttonClick={() => handleClick("easy")}>2</Button>
+          <p>{differences[content]}</p>
         </section>
       </main>
     </div>
