@@ -46,7 +46,7 @@ Once the dependencies are installed, you can run the project using the following
 npm run dev
 ```
 
-This command starts the Vite development server. By default, your project will be available at `http://localhost:3000`. Open this URL in your web browser to see your React application running.
+This command starts the Vite development server. By default, your project will be available at `http://localhost:5173/`. Open this URL in your web browser to see your React application running.
 
 Make sure you have Git and Node.js installed on your computer before starting. If you don't have them, download and install them from the official websites [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/).
 
